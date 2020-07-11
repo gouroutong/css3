@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      a:link {
+        color: #666;
+      }
+      a:visited {
+        color: #f00;
+      }
+      a:hover {
+        color: #000;
+      }
+      a:active {
+        color: #0f0;
+      }
+
+      input:enabled {
+        background-color: #0f0;
+      }
+      input:disabled {
+        background-color: #f00;
+      }
+
+      /* 结构伪类选择器（css3新增的） */
+      .demo {
+        border: 1px solid #ccc;
+        width: 300px;
+        margin: 100px auto;
+        padding: 10px;
+      }
+      .demo li {
+        float: left;
+        list-style: none;
+        padding: 2px;
+        border: 1px solid #ccc;
+        margin-right: 4px;
+        width: 20px;
+      }
+      .clearfix {
+        clear: both;
+        overflow: auto;
+      }
+      .demo a {
+          display: block;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: pink;
+          text-decoration: none;
+      }
+
+      .demo li:nth-child(even){
+          background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 动态伪类选择器 -->
+    <a href="#">Pesudo classes</a> <br />
+    <hr />
+
+    <!-- UI元素状态伪类选择器 -->
+    <input type="text" /> <br />
+    <input type="text" disabled />
+
+    <!-- 结构伪类选择器（css3新增的） -->
+    <div class="demo clearfix">
+      <ul class="clearfix">
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+        <li><a href="">7</a></li>
+        <li><a href="">8</a></li>
+        <li><a href="">9</a></li>
+        <li><a href="">10</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

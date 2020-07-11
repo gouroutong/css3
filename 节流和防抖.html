@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 500%;
+      }
+    </style>
+  </head>
+  <body>
+      <button id='btn'>按钮</button>
+    <script>
+      //fn:要被节流的函数
+      //   function throttle(fn, delay) {
+      //     //记录上一次函数触发的时间
+      //     var lastTime = 0;
+
+      //     return function () {
+      //       // 记录当前函数触发的时间
+      //       var nowTime = Date.now();
+      //       if (nowTime - lastTime > delay) {
+      //         fn.call(this);
+      //         lastTime = nowTime
+      //       }
+      //     };
+      //   }
+    //   document.onscroll = throttle(function () {
+    //     console.log("scroll事件触发" + Date.now());
+    //   }, 200);
+
+
+      function debounce(fn, delay) {
+        var timer = null;
+
+        return function () {
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            fn.apply(this);
+          }, delay);
+        };
+      }
+
+      document.getElementById('btn').onclick = debounce(function(){
+          console.log("事件触发了" + Date.now())
+      },1000)
+
+
+     
+    </script>
+  </body>
+</html>

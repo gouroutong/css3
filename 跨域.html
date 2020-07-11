@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.创建script标签
+        var script = document.createElement('script')
+        // 2.设置回调函数
+        function getData(data){
+            console.log(data)
+        }
+        // 3.设置script的src属性，设置请求地址
+        script.src = 'http://localhost:3000?callback=getData'
+
+        // 让script生效
+        document.body.appendChild(script)
+    </script>
+</body>
+</html>

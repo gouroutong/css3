@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 600px;
+        height: 500px;
+        background-color: #ccc;
+
+        /* flex实现 （新版本）*/
+        /* display: flex;
+          justify-content: center;
+          align-items: center; */
+
+        /* flex实现 （老版本）*/
+        /* display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center; */
+
+        /* 定位实现 */
+        position: relative;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        position: absolute;
+
+        /* 定位实现 1*/
+        /* top:0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        margin: auto; */
+
+        /* 定位实现 2*/
+        /* top:50%;
+          left:50%;
+          margin-left: -100px; 
+          margin-top: -100px; */
+
+        /* 定位实现 3*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

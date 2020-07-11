@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let obj = {
+      //     a: 1,
+      //   };
+      //   function test(obj) {
+      //     // obj = new Object();
+      //     obj.c = 1;
+      //     // console.log(obj.a);
+      //   }
+      //   test(obj);
+      //   console.log(obj);
+      let a = 10;
+      let b = 10;
+      function test() {
+        console.log("test");
+      }
+      (function () {
+        test();
+        console.log(a);
+        console.log(b);
+        let a = 10;
+        // let test = () => {
+        //   console.log("test2222222222");
+        // };
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求背景图片左边到box盒子左边框外侧的距离</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+           width: 100px;
+           height: 200px;
+           background: pink;
+           padding: 100px;
+           border: 80px solid blue;
+           background-image: url('./panda.jpg') ; 
+           background-repeat: no-repeat;
+           background-origin: content-box; /*背景图片起始源的位置*/
+           background-position: -50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
